@@ -1,14 +1,13 @@
+﻿import { Outlet } from 'react-router-dom';
 import Navigation from './Navigation';
 
-function Layout({ children }) {
+export default function Layout() {
   return (
     <div>
       <Navigation />
       <main className="main-content">
-        {children}
+        <Outlet />
       </main>
     </div>
   );
-};
-
-export default Layout;
+}
